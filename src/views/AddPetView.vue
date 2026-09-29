@@ -10,7 +10,7 @@
   const tutores = ref([]);
   async function carregarTutores() {
     const respostaTutores = await fetch (`${API_URL}/tutores`);
-    console.log('tutores', resposta.json);
+    console.log('tutores', respostaTutores.json());
     //transformando os valores da minha API em resposta em JSON
     tutores.value = await respostaTutores.json();
   }
