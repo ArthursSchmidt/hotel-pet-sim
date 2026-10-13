@@ -17,6 +17,16 @@ const router = createRouter({
       name: 'addPet',
       component: () => import('../views/AddPetView.vue'),
     },
+    {
+      path: '/pets/:id/editar',
+      name: 'editPet',
+      component: () => import('../views/AddPetView.vue'),
+    },
+    {
+      path: '/pets/:id',
+      name: 'detalhes-pet',
+      component: () => import('../views/PetDetailsView.vue'),
+    }
   ],
 });
 

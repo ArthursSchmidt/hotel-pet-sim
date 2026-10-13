@@ -51,6 +51,7 @@ onMounted(carregarDados);
           <th>Nome</th>
           <th>Especie</th>
           <th>Tutor</th>
+          <th>Ações</th>
         </tr>
       </thead>
 
@@ -63,6 +64,11 @@ onMounted(carregarDados);
           <td>{{ pet.nome }}</td>
           <td>{{ pet.especie }}</td>
           <td>{{ nomeDoTutor(pet.tutorId) }}</td>
+          <td>
+            <RouterLink :to="{ name: 'editPet', params: { id: pet.id } }">
+              Editar
+            </RouterLink>
+          </td>
         </tr>
       </tbody>
     </table>

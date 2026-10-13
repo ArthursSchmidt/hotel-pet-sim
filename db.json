@@ -1,7 +1,3 @@
-/*  
-Na raiz do projeto crie o arquivo db.json 
-*/
-
 {
   "tutores": [
     { "id": "1", "nome": "Ana", "telefone": "47999990000" },
