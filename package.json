@@ -4,14 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "run-p \"dev:api\" \"dev:app\"",
+    "dev:api": "json-server --watch db.json --port 3000",
+    "dev:app": "vite --host 0.0.0.0",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "run-s \"lint:*\"",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
     "format": "prettier --write src/",
-    "api": "json-server db.json"
+    "api": "json-server --watch db.json --port 3000"
   },
   "dependencies": {
     "axios": "^1.20.0",
